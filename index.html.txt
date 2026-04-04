@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Crew Germany | Official Clan Page</title>
+    <style>
+        body {
+            background-color: #0f0f0f;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 100px 20px;
+        }
+        h1 {
+            color: #ff4500;
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #cccccc;
+        }
+        .discord-btn {
+            display: inline-block;
+            background-color: #7289da;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 30px;
+            transition: 0.3s;
+        }
+        .discord-btn:hover {
+            background-color: #5b6eae;
+            transform: scale(1.05);
+        }
+        footer {
+            margin-top: 150px;
+            padding: 20px;
+            font-size: 0.8rem;
+            border-top: 1px dashed #333;
+        }
+        footer a {
+            color: #555;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Gaming Crew Germany</h1>
+        <p>Tactical Gameplay | Teamspirit | Fun</p>
+        
+        <p>Wir sind eine entspannte Gaming-Community für alle, die Spaß am Teamplay haben.</p>
+
+        <a href="https://discord.gg/Zf2x54Va9F" class="discord-btn" target="_blank">UNSEREM DISCORD BEITRETEN</a>
+    </div>
+
+    <footer>
+        <p>Partner & Support:</p>
+        <a href="https://gamertransfer.com" target="_blank" rel="noopener">Gamertransfer.com</a>
+    </footer>
+
+</body>
+</html>
