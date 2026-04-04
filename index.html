@@ -133,12 +133,27 @@
     .team-card.admin-card { border-top-color: #ff3333; }
     .team-card.manager-card { border-top-color: var(--bf-blue); }
     .team-card.core-card { border-top-color: #999; }
+    .team-card.streamer-card { border-top-color: #2e8b57; }
     
-    .team-card h3 { margin: 15px 0 5px 0; font-size: 1.4rem; color: #fff; letter-spacing: 1px; word-wrap: break-word; }
+    /* NEUE BILDER-KLASSE FÜR DIE ABZEICHEN */
+    .badge-img {
+        width: 110px;
+        height: 110px;
+        object-fit: contain;
+        margin-bottom: 5px;
+        filter: drop-shadow(0 5px 10px rgba(0,0,0,0.7));
+        transition: transform 0.3s ease;
+    }
+    .team-card:hover .badge-img {
+        transform: scale(1.08);
+    }
+
+    .team-card h3 { margin: 10px 0 5px 0; font-size: 1.4rem; color: #fff; letter-spacing: 1px; word-wrap: break-word; }
     .real-name { color: #888; font-size: 0.9rem; margin-bottom: 10px; min-height: 1.2em; }
     .role-admin { color: #ff3333; font-weight: bold; margin-bottom: 15px; font-size: 0.9rem; }
     .role-manager { color: var(--bf-blue); font-weight: bold; margin-bottom: 15px; font-size: 0.9rem; }
     .role-core { color: #999; font-weight: bold; margin-bottom: 15px; font-size: 0.9rem; }
+    .role-streamer { color: #2e8b57; font-weight: bold; margin-bottom: 15px; font-size: 0.9rem; }
     
     .tracker-btn {
         display: inline-block;
@@ -154,6 +169,9 @@
     .tracker-btn:hover { background: #333; color: #fff; border-color: var(--bf-orange); }
     .tracker-btn i { margin-right: 5px; }
     
+    .twitch-btn:hover { background: #333; color: #fff; border-color: #9146ff; }
+    .twitch-btn:hover i { color: #9146ff; }
+
     .no-link { color: #555; font-size: 0.85rem; padding: 8px 15px; border: 1px dashed #333; display: inline-block; width: 80%; }
 
     footer { margin-top: 60px; padding: 30px; background: #000; font-size: 0.9rem; color: #666; }
@@ -208,7 +226,7 @@
         
         <div class="team-grid">
             <div class="team-card admin-card">
-                <i class="fas fa-user-shield" style="font-size: 3rem; color: #ff3333;"></i>
+                <img src="badge-admin.png" class="badge-img" alt="Admin Abzeichen">
                 <h3>WHISPER</h3>
                 <div class="real-name">Alex</div>
                 <div class="role-admin">ADMIN</div>
@@ -216,7 +234,7 @@
             </div>
 
             <div class="team-card admin-card">
-                <i class="fas fa-user-shield" style="font-size: 3rem; color: #ff3333;"></i>
+                <img src="badge-admin.png" class="badge-img" alt="Admin Abzeichen">
                 <h3>FINALEND4</h3>
                 <div class="real-name">Maxi</div>
                 <div class="role-admin">ADMIN</div>
@@ -224,7 +242,7 @@
             </div>
 
             <div class="team-card manager-card">
-                <i class="fas fa-users-cog" style="font-size: 3rem; color: var(--bf-blue);"></i>
+                <img src="badge-manager.png" class="badge-img" alt="Manager Abzeichen">
                 <h3>KAMIKAZI1860</h3>
                 <div class="real-name">Sebastian</div>
                 <div class="role-manager">MEMBER MANAGER</div>
@@ -232,7 +250,7 @@
             </div>
 
             <div class="team-card manager-card">
-                <i class="fas fa-users-cog" style="font-size: 3rem; color: var(--bf-blue);"></i>
+                <img src="badge-manager.png" class="badge-img" alt="Manager Abzeichen">
                 <h3>JOKER</h3>
                 <div class="real-name">Ronny</div>
                 <div class="role-manager">MEMBER MANAGER</div>
@@ -246,8 +264,16 @@
         <p style="color: #999; margin-bottom: 10px;">Unsere aktiven Veteranen auf dem Schlachtfeld.</p>
 
         <div class="team-grid">
+            <div class="team-card streamer-card">
+                <img src="badge-streamer.png" class="badge-img" alt="Streamer Abzeichen">
+                <h3>KNUSPIII</h3>
+                <div class="real-name">Peter</div>
+                <div class="role-streamer">STREAMER</div>
+                <a href="https://www.twitch.tv/knuspiiiger" target="_blank" class="tracker-btn twitch-btn"><i class="fab fa-twitch"></i> Twitch Kanal</a>
+            </div>
+
             <div class="team-card core-card">
-                <i class="fas fa-headset" style="font-size: 3rem; color: #999;"></i>
+                <img src="badge-veteran.png" class="badge-img" alt="Veteran Abzeichen">
                 <h3>DER ALTE SCHURKE</h3>
                 <div class="real-name">Kevin</div>
                 <div class="role-core">VETERAN</div>
@@ -255,7 +281,7 @@
             </div>
 
             <div class="team-card core-card">
-                <i class="fas fa-headset" style="font-size: 3rem; color: #999;"></i>
+                <img src="badge-veteran.png" class="badge-img" alt="Veteran Abzeichen">
                 <h3>WHATAFUN</h3>
                 <div class="real-name">Vinc</div>
                 <div class="role-core">VETERAN</div>
@@ -263,7 +289,7 @@
             </div>
 
             <div class="team-card core-card">
-                <i class="fas fa-headset" style="font-size: 3rem; color: #999;"></i>
+                <img src="badge-veteran.png" class="badge-img" alt="Veteran Abzeichen">
                 <h3>BASED2HARD</h3>
                 <div class="real-name">Toni</div>
                 <div class="role-core">VETERAN</div>
@@ -271,7 +297,7 @@
             </div>
 
             <div class="team-card core-card">
-                <i class="fas fa-headset" style="font-size: 3rem; color: #999;"></i>
+                <img src="badge-veteran.png" class="badge-img" alt="Veteran Abzeichen">
                 <h3>CPTMCSCHNUBBI</h3>
                 <div class="real-name">Erik</div>
                 <div class="role-core">VETERAN</div>
@@ -279,7 +305,7 @@
             </div>
 
             <div class="team-card core-card">
-                <i class="fas fa-headset" style="font-size: 3rem; color: #999;"></i>
+                <img src="badge-veteran.png" class="badge-img" alt="Veteran Abzeichen">
                 <h3>WELTATLAS</h3>
                 <div class="real-name">Uli</div>
                 <div class="role-core">VETERAN</div>
@@ -287,7 +313,7 @@
             </div>
 
             <div class="team-card core-card">
-                <i class="fas fa-headset" style="font-size: 3rem; color: #999;"></i>
+                <img src="badge-veteran.png" class="badge-img" alt="Veteran Abzeichen">
                 <h3>TOMMYLEE1EE7</h3>
                 <div class="real-name">Thommy</div>
                 <div class="role-core">VETERAN</div>
@@ -295,7 +321,7 @@
             </div>
 
             <div class="team-card core-card">
-                <i class="fas fa-headset" style="font-size: 3rem; color: #999;"></i>
+                <img src="badge-veteran.png" class="badge-img" alt="Veteran Abzeichen">
                 <h3>XXO-SQUISHY-OXX</h3>
                 <div class="real-name">Emma</div>
                 <div class="role-core">VETERAN</div>
@@ -303,7 +329,7 @@
             </div>
 
             <div class="team-card core-card">
-                <i class="fas fa-headset" style="font-size: 3rem; color: #999;"></i>
+                <img src="badge-veteran.png" class="badge-img" alt="Veteran Abzeichen">
                 <h3>DERSIVAN</h3>
                 <div class="real-name">Malte</div>
                 <div class="role-core">VETERAN</div>
