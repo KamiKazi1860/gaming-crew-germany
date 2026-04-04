@@ -16,7 +16,6 @@
     }
 
     body { 
-        /* HIER IST DER DUNKLE FILTER ZURÜCK: linear-gradient mit 85% Schwarz */
         background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), 
                     url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop') no-repeat center center fixed; 
         background-size: cover; 
@@ -25,7 +24,6 @@
         text-align: center; 
         margin: 0; 
         text-transform: uppercase; 
-        overflow-x: hidden;
     }
 
     /* NAVIGATION */
@@ -47,34 +45,15 @@
     }
     nav a:hover { color: var(--bf-orange); text-shadow: 0 0 10px var(--bf-orange); }
 
-    .container { 
-        max-width: 900px; 
-        margin: 0 auto; 
-        padding: 40px 20px; 
-    }
+    .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
 
-    .logo { 
-        width: 100%; 
-        max-width: 380px; 
-        margin: 20px 0; 
-        filter: drop-shadow(0 0 15px var(--bf-orange)); 
-    }
+    .logo { width: 100%; max-width: 380px; margin: 20px 0; filter: drop-shadow(0 0 15px var(--bf-orange)); }
 
-    .est { 
-        color: var(--bf-blue); 
-        letter-spacing: 5px; 
-        font-weight: bold; 
-        font-size: 1.2rem;
-    }
+    .est { color: var(--bf-blue); letter-spacing: 5px; font-weight: bold; font-size: 1.2rem; }
 
-    h1 { 
-        font-size: 4rem; 
-        margin: 10px 0; 
-        font-style: italic; 
-        text-shadow: 4px 4px 0px #000; 
-    }
+    h1 { font-size: 4rem; margin: 10px 0; font-style: italic; text-shadow: 4px 4px 0px #000; }
 
-    /* HAUPT-EINSATZ-KASTEN */
+    /* EINSATZ-KASTEN */
     .mission-box {
         background: var(--dark-bg);
         border: 2px solid #333;
@@ -84,84 +63,32 @@
         text-align: left;
         box-shadow: 10px 10px 30px rgba(0,0,0,0.6);
     }
+    .mission-box h2 { color: var(--bf-orange); font-size: 2.2rem; margin-top: 0; border-bottom: 1px solid #333; padding-bottom: 10px; }
+    .mission-box p { font-size: 1.1rem; line-height: 1.6; color: #ccc; }
 
-    .mission-box h2 {
-        color: var(--bf-orange);
-        font-size: 2.2rem;
-        margin-top: 0;
-        border-bottom: 1px solid #333;
-        padding-bottom: 10px;
-    }
-
-    .mission-box p {
-        font-size: 1.1rem;
-        line-height: 1.6;
-        color: #ccc;
-    }
-
-    /* DIE NEUE ACTION-LEISTE MIT SYMBOLEN */
-    .action-bar {
-        margin-top: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start; /* Links ausrichten */
-        gap: 25px;
-        flex-wrap: wrap; 
-    }
-
-    /* DER GROSSE DISCORD BUTTON */
+    /* ACTION-LEISTE & SYMBOLE */
+    .action-bar { margin-top: 30px; display: flex; align-items: center; justify-content: flex-start; gap: 25px; flex-wrap: wrap; }
+    
     .discord-btn { 
-        display: inline-flex; 
-        align-items: center;
-        gap: 10px; 
-        background: var(--bf-orange); 
-        color: #fff; 
-        padding: 18px 35px; 
-        text-decoration: none; 
-        font-weight: bold; 
-        font-size: 1.3rem; 
-        clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%); 
-        transition: 0.3s; 
+        display: inline-flex; align-items: center; gap: 10px; 
+        background: var(--bf-orange); color: #fff; padding: 18px 35px; 
+        text-decoration: none; font-weight: bold; font-size: 1.3rem; 
+        clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%); transition: 0.3s; 
     }
-    .discord-btn:hover { 
-        background: #ff5e1a; 
-        transform: scale(1.05); 
-        box-shadow: 0 0 20px rgba(255, 69, 0, 0.5);
-    }
+    .discord-btn:hover { background: #ff5e1a; transform: scale(1.05); box-shadow: 0 0 20px rgba(255, 69, 0, 0.5); }
 
-    /* DIE KLEINEN SOCIAL SYMBOLE */
-    .icon-link {
-        color: #888; 
-        font-size: 2.2rem; 
-        transition: 0.3s;
-        text-decoration: none;
-    }
-
-    /* EFFEKTE BEIM DRÜBERFAHREN */
+    .icon-link { color: #888; font-size: 2.2rem; transition: 0.3s; text-decoration: none; }
     .icon-link:hover { transform: translateY(-5px) scale(1.1); }
     .yt-icon:hover { color: #ff0000; filter: drop-shadow(0 0 10px #ff0000); }    
     .ig-icon:hover { color: #e1306c; filter: drop-shadow(0 0 10px #e1306c); }    
     .tw-icon:hover { color: #9146ff; filter: drop-shadow(0 0 10px #9146ff); }    
 
-    /* ANDERE SEKTIONEN (NEWS, TEAM) */
-    .section { 
-        display: none; 
-        background: var(--dark-bg); 
-        padding: 30px; 
-        border-left: 5px solid var(--bf-orange); 
-        margin-top: 20px; 
-        text-align: left; 
-    }
+    /* REITER INHALT */
+    .section { display: none; background: var(--dark-bg); padding: 30px; border-left: 5px solid var(--bf-orange); margin-top: 20px; text-align: left; }
     .active { display: block; animation: fadeIn 0.3s ease-in-out; }
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-    footer { 
-        margin-top: 60px; 
-        padding: 30px; 
-        background: #000; 
-        font-size: 0.9rem; 
-        color: #666; 
-    }
+    footer { margin-top: 60px; padding: 30px; background: #000; font-size: 0.9rem; color: #666; }
     footer a { color: var(--bf-orange); text-decoration: none; }
 </style>
 </head>
@@ -182,4 +109,44 @@
 
     <div id="h" class="section active mission-box">
         <h2>Einsatzbefehl: Rekrutierung</h2>
-        <p>Wir sind die Gaming Crew Germany. Battlefield Veteranen der ersten Stunde, vereint seit 2012. Bei uns zählen keine Statistiken, sondern Loyalität, Taktik und der gemeinsame Spaß am Chaos
+        <p>Wir sind die Gaming Crew Germany. Battlefield Veteranen der ersten Stunde, vereint seit 2012. Bei uns zählen keine Statistiken, sondern Loyalität, Taktik und der gemeinsame Spaß am Chaos auf dem Schlachtfeld.</p>
+        
+        <div class="action-bar">
+            <a href="https://discord.gg/Zf2x54Va9F" target="_blank" class="discord-btn">
+                <i class="fab fa-discord"></i> DISCORD BEITRETEN
+            </a>
+            
+            <a href="https://www.youtube.com/user/gcggamingcrewgermany" target="_blank" class="icon-link yt-icon" title="GCG YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com/gcg_gaming_crew_germany" target="_blank" class="icon-link ig-icon" title="GCG Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.twitch.tv/gcg_gaming_crew_german" target="_blank" class="icon-link tw-icon" title="GCG Twitch">
+                <i class="fab fa-twitch"></i>
+            </a>
+        </div>
+    </div>
+
+    <div id="n" class="section">
+        <h2>Intel / News</h2>
+        <p><strong>[04. APR 2026]</strong> Unsere neue digitale Operationsbasis ist offiziell online.</p>
+    </div>
+    
+    <div id="t" class="section">
+        <h2>Kommandoebene</h2>
+        <p><strong>Gründer & Hauptquartier:</strong> Kamikazi</p>
+    </div>
+</div>
+
+<footer>&copy; 2026 GCG | Battlefield Veterans | Partner: <a href="https://gamertransfer.com" target="_blank">Gamertransfer.com</a></footer>
+
+<script>
+function sh(id) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
