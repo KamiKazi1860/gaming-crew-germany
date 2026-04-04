@@ -35,6 +35,7 @@
         justify-content: center; 
         gap: 20px; 
         position: sticky; top: 0; z-index: 100;
+        flex-wrap: wrap;
     }
     nav a { 
         color: #fff; 
@@ -135,7 +136,6 @@
     .team-card.core-card { border-top-color: #999; }
     .team-card.streamer-card { border-top-color: #2e8b57; }
     
-    /* NEUE BILDER-KLASSE FÜR DIE ABZEICHEN */
     .badge-img {
         width: 110px;
         height: 110px;
@@ -144,9 +144,7 @@
         filter: drop-shadow(0 5px 10px rgba(0,0,0,0.7));
         transition: transform 0.3s ease;
     }
-    .team-card:hover .badge-img {
-        transform: scale(1.08);
-    }
+    .team-card:hover .badge-img { transform: scale(1.08); }
 
     .team-card h3 { margin: 10px 0 5px 0; font-size: 1.4rem; color: #fff; letter-spacing: 1px; word-wrap: break-word; }
     .real-name { color: #888; font-size: 0.9rem; margin-bottom: 10px; min-height: 1.2em; }
@@ -168,11 +166,54 @@
     }
     .tracker-btn:hover { background: #333; color: #fff; border-color: var(--bf-orange); }
     .tracker-btn i { margin-right: 5px; }
-    
     .twitch-btn:hover { background: #333; color: #fff; border-color: #9146ff; }
     .twitch-btn:hover i { color: #9146ff; }
 
     .no-link { color: #555; font-size: 0.85rem; padding: 8px 15px; border: 1px dashed #333; display: inline-block; width: 80%; }
+
+    /* KONTAKT FORMULAR STYLE */
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 30px;
+    }
+    .contact-form input, .contact-form textarea {
+        background: rgba(0, 0, 0, 0.7);
+        border: 1px solid #444;
+        color: #eee;
+        padding: 15px;
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.1rem;
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+    .contact-form input:focus, .contact-form textarea:focus {
+        border-color: var(--bf-orange);
+        outline: none;
+        box-shadow: 0 0 10px rgba(255, 69, 0, 0.3);
+    }
+    .contact-form button {
+        background: var(--bf-orange);
+        color: #fff;
+        padding: 18px;
+        border: none;
+        font-weight: bold;
+        font-size: 1.3rem;
+        cursor: pointer;
+        transition: 0.3s;
+        clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+        font-family: 'Oswald', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    .contact-form button:hover {
+        background: #ff5e1a;
+        transform: scale(1.02);
+        box-shadow: 0 0 20px rgba(255, 69, 0, 0.5);
+    }
 
     footer { margin-top: 60px; padding: 30px; background: #000; font-size: 0.9rem; color: #666; }
     footer a { color: var(--bf-orange); text-decoration: none; }
@@ -186,6 +227,7 @@
     <a onclick="sh('t')">CREW</a>
     <a onclick="sh('his')">HISTORY</a>
     <a onclick="sh('r')">REGELN</a>
+    <a onclick="sh('k')">KONTAKT</a>
     <a href="https://xoose.de/gcg-shop/" target="_blank">SHOP</a>
 </nav>
 
@@ -393,6 +435,18 @@
                 <p>Kein toxisches Verhalten, kein Geflame im Ingame-Chat und absolut null Toleranz für Cheater, Bug-Abuser oder Hacker. Wir behandeln unsere Mitspieler (und auch die Gegner) mit Respekt. Der gemeinsame Spaß am Chaos steht immer an erster Stelle!</p>
             </li>
         </ul>
+    </div>
+
+    <div id="k" class="section">
+        <h2>Funkverbindung (Kontakt)</h2>
+        <p style="color: #999; margin-bottom: 20px; text-transform: none;">Melde dich beim HQ für Clanwars, Partnerschaften oder wenn du rekrutiert werden möchtest.</p>
+        
+        <form class="contact-form" action="https://formspree.io/f/mqeggpky" method="POST">
+            <input type="text" name="name" placeholder="Dein GamerTag / Name" required>
+            <input type="email" name="_replyto" placeholder="Deine E-Mail-Adresse" required>
+            <textarea name="message" rows="6" placeholder="Deine Nachricht an das Hauptquartier..." required></textarea>
+            <button type="submit"><i class="fas fa-paper-plane"></i> NACHRICHT SENDEN</button>
+        </form>
     </div>
 
 </div>
