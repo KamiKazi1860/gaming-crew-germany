@@ -22,9 +22,9 @@ footer { margin-top: 60px; padding: 30px; background: #000; font-size: 0.8rem; c
 </head>
 <body>
 <nav>
-<a onclick="show('h')">HOME</a>
-<a onclick="show('n')">NEWS</a>
-<a onclick="show('t')">TEAM</a>
+<a onclick="sh('h')">HOME</a>
+<a onclick="sh('n')">NEWS</a>
+<a onclick="sh('t')">TEAM</a>
 <a href="https://xoose.de/gcg-shop/" target="_blank">SHOP</a>
 </nav>
 <div class="container">
@@ -47,7 +47,7 @@ footer { margin-top: 60px; padding: 30px; background: #000; font-size: 0.8rem; c
 </div>
 <footer>&copy; 2026 GCG | <a href="https://gamertransfer.com" target="_blank" style="color:var(--bf-orange)">Gamertransfer.com</a></footer>
 <script>
-function show(id) {
+function sh(id) {
 document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
 document.getElementById(id).classList.add('active');
 }
