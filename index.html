@@ -3,71 +3,253 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaming Crew Germany | Official Clan Page</title>
+    <title>GCG | Gaming Crew Germany - Est. 2012</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bf-orange: #ff4500;
+            --bf-blue: #0081a7;
+            --dark-bg: #0b0d10;
+        }
+
         body {
-            background-color: #0f0f0f;
-            color: #ffffff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), 
+                        url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #eeeeee;
+            font-family: 'Oswald', sans-serif;
             margin: 0;
-            padding: 0;
-        }
-        .container {
-            padding: 100px 20px;
-        }
-        h1 {
-            color: #ff4500;
-            font-size: 3rem;
             text-transform: uppercase;
-            letter-spacing: 5px;
+            overflow-x: hidden;
         }
-        p {
-            font-size: 1.2rem;
-            color: #cccccc;
+
+        /* NAVIGATION */
+        nav {
+            background: rgba(0, 0, 0, 0.95);
+            border-bottom: 3px solid var(--bf-orange);
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
         }
-        .discord-btn {
-            display: inline-block;
-            background-color: #7289da;
+
+        nav a {
             color: white;
-            padding: 15px 30px;
             text-decoration: none;
-            border-radius: 5px;
             font-weight: bold;
-            margin-top: 30px;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
             transition: 0.3s;
+            cursor: pointer;
         }
-        .discord-btn:hover {
-            background-color: #5b6eae;
+
+        nav a:hover {
+            color: var(--bf-orange);
+            text-shadow: 0 0 10px var(--bf-orange);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .logo {
+            max-width: 280px;
+            filter: drop-shadow(0 0 20px rgba(255, 69, 0, 0.4));
+            margin-bottom: 10px;
+        }
+
+        .est {
+            color: var(--bf-blue);
+            font-weight: bold;
+            letter-spacing: 8px;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 4.5rem;
+            margin: 0;
+            letter-spacing: -2px;
+            font-style: italic;
+            line-height: 1;
+            text-shadow: 4px 4px 0px rgba(0,0,0,0.8);
+        }
+
+        /* SEKTIONEN */
+        .section {
+            display: none;
+            background: rgba(15, 15, 15, 0.85);
+            padding: 50px;
+            border-left: 5px solid var(--bf-orange);
+            margin-top: 40px;
+            backdrop-filter: blur(8px);
+            box-shadow: 20px 20px 0px rgba(0,0,0,0.3);
+            text-align: left;
+        }
+
+        .active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            color: var(--bf-orange);
+            font-size: 2.5rem;
+            margin-top: 0;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+
+        /* SOCIAL MEDIA BAR */
+        .social-bar {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .social-icon {
+            background: #1a1a1a;
+            padding: 12px 20px;
+            border-radius: 3px;
+            color: white;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: bold;
+            border-bottom: 3px solid var(--bf-blue);
+            transition: 0.2s;
+        }
+
+        .social-icon:hover {
+            background: #252525;
+            border-bottom-color: var(--bf-orange);
             transform: scale(1.05);
         }
-        footer {
-            margin-top: 150px;
-            padding: 20px;
-            font-size: 0.8rem;
-            border-top: 1px dashed #333;
-        }
-        footer a {
-            color: #555;
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 20px 45px;
+            background: var(--bf-orange);
+            color: white;
             text-decoration: none;
+            font-weight: bold;
+            font-size: 1.3rem;
+            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+            transition: 0.3s;
         }
+
+        .btn:hover {
+            background: #ff5e1a;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 69, 0, 0.4);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .team-card {
+            background: rgba(255,255,255,0.05);
+            padding: 15px;
+            border-left: 2px solid var(--bf-blue);
+        }
+
+        footer {
+            margin-top: 80px;
+            padding: 30px;
+            background: #000;
+            font-size: 0.8rem;
+            color: #555;
+        }
+
+        footer a { color: #888; text-decoration: none; }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Gaming Crew Germany</h1>
-        <p>Tactical Gameplay | Teamspirit | Fun</p>
-        
-        <p>Wir sind eine entspannte Gaming-Community für alle, die Spaß am Teamplay haben.</p>
+    <nav>
+        <a onclick="show('home')">Home</a>
+        <a onclick="show('news')">News</a>
+        <a onclick="show('team')">Team</a>
+        <a href="https://xoose.de/gcg-shop/" target="_blank">Shop</a>
+    </nav>
 
-        <a href="https://discord.gg/Zf2x54Va9F" class="discord-btn" target="_blank">UNSEREM DISCORD BEITRETEN</a>
+    <div class="container">
+        <img src="https://xoose.de/wp-content/uploads/2021/04/gaming-crew-germany-logo.png" class="logo" alt="GCG">
+        <div class="est">ESTABLISHED 2012</div>
+        <h1>GAMING CREW GERMANY</h1>
+
+        <div id="home" class="section active">
+            <h2>Einsatzbefehl</h2>
+            <p>Seit über einem Jahrzehnt sind wir die erste Anlaufstelle für Battlefield-Enthusiasten. Bei uns zählen keine K/D-Raten, sondern Loyalität, Teamplay und der gemeinsame Spaß am Chaos auf dem Schlachtfeld.</p>
+            <p>Bereit für den Einsatz, Soldat?</p>
+            <center>
+                <a href="https://discord.gg/Zf2x54Va9F" class="btn">DISCORD BEITRETEN</a>
+            </center>
+        </div>
+
+        <div id="news" class="section">
+            <h2>Intel / Berichte</h2>
+            <p style="color: var(--bf-orange);"><strong>[04. APR 2026] Website Deployment</strong></p>
+            <p>Die neue Clan-Zentrale ist offiziell online. Alle Einheiten sind angewiesen, die Seite als Startseite festzulegen.</p>
+            <hr style="border: 0; border-top: 1px solid #333;">
+            <p><strong>[EVENT] Freitag Nacht</strong></p>
+            <p>Großes Community-Event. Treffen im Discord ab 20:00 Uhr.</p>
+        </div>
+
+        <div id="team" class="section">
+            <h2>Kommandoebene</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <h3 style="color: var(--bf-orange); margin: 0;">Gründer</h3>
+                    <p>[Dein Name hier]</p>
+                </div>
+                <div class="team-card">
+                    <h3 style="color: var(--bf-blue); margin: 0;">Veteranen</h3>
+                    <p>Die GCG Stammspieler</p>
+                </div>
+            </div>
+            <p style="margin-top: 30px; font-size: 0.9rem; color: #888;">Wir sind immer auf der Suche nach fähigen Squad-Leadern und Teamplayern.</p>
+        </div>
+
+        <div class="social-bar">
+            <a href="https://www.instagram.com/gcg_gaming_crew_germany" target="_blank" class="social-icon">INSTAGRAM</a>
+            <a href="https://x.com/gcg_gaming_crew" target="_blank" class="social-icon">X / TWITTER</a>
+            <a href="https://www.youtube.com/user/gcggamingcrewgermany" target="_blank" class="social-icon">YOUTUBE</a>
+            <a href="https://www.twitch.tv/gcg_gaming_crew_german" target="_blank" class="social-icon">TWITCH</a>
+        </div>
     </div>
 
     <footer>
-        <p>Partner & Support:</p>
-        <a href="https://gamertransfer.com" target="_blank" rel="noopener">Gamertransfer.com</a>
+        &copy; 2026 GCG | Proud Member of the Battlefield Community since 2012 | Partner: <a href="https://gamertransfer.com" target="_blank">Gamertransfer.com</a>
     </footer>
+
+    <script>
+        function show(id) {
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            window.scrollTo(0, document.querySelector('nav').offsetTop);
+        }
+    </script>
 
 </body>
 </html>
